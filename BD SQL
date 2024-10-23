@@ -1,0 +1,32 @@
+create database productdb;
+use productdb;
+create table products
+(id int auto_increment primary key, 
+pname varchar(30) not null,
+manufacturer varchar(35) not null,
+count int default null,
+price decimal not null
+);
+insert products (pname, manufacturer, count, price)
+values
+('kot_v_sapogah', 'catformula', 2, 15000),
+('kot_obormot', 'catfactor', 1, 90000),
+('lisiy_kot', 'catformula', 3, 18000),
+('kot_v_meshke', 'catformula', 3, 3000),
+('kot_poliglot', 'catfactor', 1, 22000),
+('kotopyos_standart', 'catdogmix', 8, 16000),
+('kotopyos_extra', 'catdogmix', 1, 180000),
+('kotopyos_v2.0', 'catdogmix', 3, 30000),
+('pyosiy_hvost', 'pyosproduction', 1, 11000),
+('lapa_kota', 'catformula', 4, 20000),
+('pyos_k_divanu_priros', 'pyosproduction', 2, 6000),
+('kot_na_derevo_zalez', 'catfactor', 5, 21000),
+('kotik_shprotik', 'catformula', 1, 15000),
+('pyos_vezde_suyot_svoi_nos', 'pyosproduction', 2, 12000),
+('pyos_pilesos', 'pyosproduction', 6, 9000),
+('kot_naoborot', 'catformula', 10, 10000),
+('kotopyos_15_pro', 'catdogmix', 8, 7000),
+('kotopyos_limited_edition', 'catdogmix', 1, 240000),
+('pyos_snaiper', 'pyosproduction', 3, 2000),
+('pyosogrelka', 'pyosproduction', 3, 2000);
+select * from products ORDER BY price desc;
